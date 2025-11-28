@@ -1,4 +1,10 @@
 'use strict';
 
-const cookiedialog = document.querySelector('.cookie');
-const settingdialog = document.querySelector('.setting');
+const settingdialog = document.querySelector('.setting-dialog');
+
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    const cookiedialog = document.querySelector('.cookie-dialog');
+    cookiedialog.showModal();
+  }, 2000);
+})
