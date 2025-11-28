@@ -54,6 +54,17 @@ main {
   width: 100px;
 }
 
+.unselect {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 42, 255);
+  border: 1px solid rgb(0, 42, 255);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 5px;
+  border-radius: 20px;
+  width: 120px;
+}
+
 .savebtn {
   background-color: rgb(0, 42, 255);
   color: white;

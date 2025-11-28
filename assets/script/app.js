@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const widthcheck = document.getElementById('widthcheck');
   const heightcheck = document.getElementById('heightcheck');
   const haveCookie = getCookies('userCookies');
+  const unselect = document.querySelector('.unselect');
 
   if (!haveCookie) {
     setTimeout(() => {
@@ -31,6 +32,10 @@ settingbtn.addEventListener('click', () => {
 savebtn.addEventListener('click', () => {
   saveSelectedCookies();
   settingdialog.close();
+})
+
+unselect.addEventListener('click', () => {
+  unselectAll();
 })
 
 function saveAllCookies() {
@@ -61,6 +66,12 @@ function saveSelectedCookies() {
     }
   }
 
+  function unselectAll() {
+    browsercheck.checked = false;
+    oscheck.checked = false;
+    widthcheck.checked = false;
+    heightcheck.checked = false;
+  }
 
 
 function setCookie(name, value) {
