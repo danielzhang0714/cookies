@@ -26,3 +26,21 @@ main {
   top: 45%;
   z-index: 2;
 }
+
+.setting [type="button"] {
+  background-color: rgb(0, 42, 255);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.setting [type="button"] {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 42, 255);
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 20px;
+}
