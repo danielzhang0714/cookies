@@ -1,0 +1,28 @@
+@charset "utf-8";
+@import "./reset.css";
+
+.container {
+  width: min(100% - 30px, 500px);
+  margin-inline: auto;
+}
+
+body {
+  background-image: url(../media/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+main {
+  margin-top: 100px;
+}
+
+.herotext {
+  font-size: 60px;
+  position: fixed;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px #00000042;
+  top: 45%;
+  z-index: 2;
+}
