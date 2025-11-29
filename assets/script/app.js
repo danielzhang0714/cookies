@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const oscheck = document.getElementById('oscheck');
   const widthcheck = document.getElementById('widthcheck');
   const heightcheck = document.getElementById('heightcheck');
-  const haveCookie = getCookies('userCookies');
+  const haveCookie = getCookies('usercookies');
   const unselect = document.querySelector('.unselect');
 
   if (!haveCookie) {
     setTimeout(() => {
       cookiedialog.showModal();
-    }, 2000);
+    }, 1500);
   }
 
 
@@ -45,7 +45,7 @@ cookiedialog.addEventListener('click', (e) => {
   ){
     cookiedialog.close();
   }
-  if (!getCookies('userCookies')) {
+  if (!getCookies('usercookies')) {
     setTimeout(() => {
       cookiedialog.showModal();
     }, 5000);
@@ -53,15 +53,15 @@ cookiedialog.addEventListener('click', (e) => {
 })
 
 function saveAllCookies() {
-    setCookie('userCookies', 'fully-accepted');
+    setCookie('usercookies', 'fully-accepted');
     setCookie('browser', getBrowser());
     setCookie('os', getOS());
-    setCookie('screenWidth', screen.width);
-    setCookie('screenHeight', screen.height);
+    setCookie('screenwidth', screen.width);
+    setCookie('screenheight', screen.height);
   }
 
 function saveSelectedCookies() {
-    setCookie('userCookies', 'partially-accepted');
+    setCookie('usercookies', 'partially-accepted');
     if (browsercheck.checked) {
       setCookie('browser', getBrowser());
     }
@@ -69,14 +69,14 @@ function saveSelectedCookies() {
       setCookie('os', getOS());
     }
     if (widthcheck.checked) {
-      setCookie('screenWidth', screen.width);
+      setCookie('screenwidth', screen.width);
     }
     if (heightcheck.checked) {
-      setCookie('screenHeight', screen.height);
+      setCookie('screenheight', screen.height);
     }
 
     if (!browsercheck.checked && !oscheck.checked && !widthcheck.checked && !heightcheck.checked) {
-      setCookie('userCookies', 'rejected');
+      setCookie('usercookies', 'rejected');
     }
   }
 
