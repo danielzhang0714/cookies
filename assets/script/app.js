@@ -45,7 +45,7 @@ cookiedialog.addEventListener('click', (e) => {
   ){
     cookiedialog.close();
   }
-  if (!haveCookie) {
+  if (!getCookies('userCookies')) {
     setTimeout(() => {
       cookiedialog.showModal();
     }, 5000);

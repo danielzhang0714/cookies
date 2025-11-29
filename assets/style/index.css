@@ -84,6 +84,8 @@ dialog {
   position: relative;
   margin: auto;
   top: 0;
+  border: none;
+  box-shadow: 2px 1px #666;
 }
 
 .cookie-dialog,
