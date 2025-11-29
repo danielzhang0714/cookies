@@ -38,6 +38,20 @@ unselect.addEventListener('click', () => {
   unselectAll();
 })
 
+cookiedialog.addEventListener('click', (e) => {
+  const rect = cookiedialog.getBoundingClientRect();
+  if(e.clientY < rect.top || e.clientY > rect.bottom ||
+    e.clientX < rect.left || e.clientX > rect.right
+  ){
+    cookiedialog.close();
+  }
+  if (!haveCookie) {
+    setTimeout(() => {
+      cookiedialog.showModal();
+    }, 5000);
+  }
+})
+
 function saveAllCookies() {
     setCookie('userCookies', 'fully-accepted');
     setCookie('browser', getBrowser());
@@ -106,4 +120,6 @@ function getBrowser() {
     if (ua.includes('Linux')) return 'Linux';
     return 'Unknown OS';
   }
+
+
 })
