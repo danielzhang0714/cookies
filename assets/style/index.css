@@ -88,8 +88,7 @@ dialog {
   box-shadow: 2px 1px #666;
 }
 
-.cookie-dialog,
-.setting-dialog {
+.cookie-dialog, .setting-dialog {
   width: 300px;
   padding: 20px;
   border-radius: 10px;
